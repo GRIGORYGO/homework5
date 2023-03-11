@@ -20,19 +20,17 @@ return array;
 }
 
 
-int[] GetSumm(int [] arr)
+int GetSumm(int [] arr)
 {
 int sum = 0;
-for (int i = 0; i < arr.Length; i++)
+for (int i = 1; i < arr.Length; i+=2)
   {
-  if (arr[i] % 2 == 0)
     sum += arr[i];
   }
 return sum;
 }
 
-GetArray();
-GetSumm();
+
 int [] arr = GetArray();
 int result = GetSumm(arr);
 Console.WriteLine($"Сумма элементов на нечетных позициях равна = {result}");
